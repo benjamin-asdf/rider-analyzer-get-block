@@ -1,0 +1,4 @@
+Error during analysis:
+System.MissingMethodException: Method not found: 'Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousFunctionExpressionSyntax.get_Block()'.
+   at EmptyAnalyzer.BestAnalyzer.GetBlock(SyntaxNode node)
+   at EmptyAnalyzer.BestAnalyzer.<Initialize>b__10_0(SyntaxNodeAnalysisContext analysisContext)

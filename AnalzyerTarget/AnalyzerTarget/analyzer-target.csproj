@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>analyzer_target</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- this one works -->
+    <!-- <Analyzer Include="../../code-analysis-2.9.0/EmptyAnalyzer/output/EmptyAnalyzer.dll" /> -->
+
+    <!-- this one works when invoked during compilation -->
+    <!-- throws exception when running within rider -->
+    <Analyzer Include="../../code-analysis-3.6.0/EmptyAnalyzer/output/EmptyAnalyzer.dll" />
+
+<!--     error: -->
+<!-- Error during analysis: -->
+<!-- System.MissingMethodException: Method not found: 'Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousFunctionExpressionSyntax.get_Block()'. -->
+<!--    at EmptyAnalyzer.BestAnalyzer.GetBlock(SyntaxNode node) -->
+<!--    at EmptyAnalyzer.BestAnalyzer.<Initialize>b__10_0(SyntaxNodeAnalysisContext analysisContext) -->
+
+  </ItemGroup>
+
+</Project>
